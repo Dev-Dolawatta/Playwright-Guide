@@ -7,6 +7,8 @@ const config: PlaywrightTestConfig = {
     screenshot : "only-on-failure",//capture screenshots only when a test fails
     video : "retain-on-failure"//record videos only when a test fails and retain them for debugging purposes
   },
+  retries : 2,//retry failed tests up to 2 times
+  
   //reporter configuration to generate reports in different formats
   reporter:[["dot"],//GREEN if right and RED if wrong
   ["json",{outputFile:"jsonReports/report.json"}],//generate a json report in the specified path
