@@ -3,7 +3,9 @@ import type { PlaywrightTestConfig } from "playwright/test";// See https://playw
 const config: PlaywrightTestConfig = {
   testMatch:["tests/record.test.ts"],// Specify the test files to run, in this case only the Login.test.ts file
   use:{
-    headless : false
+    headless : false,
+    screenshot : "only-on-failure",//capture screenshots only when a test fails
+    video : "retain-on-failure"//record videos only when a test fails and retain them for debugging purposes
   },
   //reporter configuration to generate reports in different formats
   reporter:[["dot"],//GREEN if right and RED if wrong
