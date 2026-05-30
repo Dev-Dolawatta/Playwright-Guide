@@ -31,4 +31,14 @@ test("Login test demo",async() =>{
     //adding a timeout cuz the result is really fast 
     await page.waitForTimeout(5000);
 
+    //------------------------------------------------------
+    //opening a new page to check if the login was successful by checking the presence of the my account icon
+    const newPage = await context.newPage();
+    await newPage.goto("https://ecommerce-playground.lambdatest.io/")
+
+    //checking that the login opens from another browser =simultaneous action 
+    const newContext = await browser.newContext();
+    const newPage2 = await newContext.newPage();
+    await newPage2.goto("https://ecommerce-playground.lambdatest.io/")
+
 })
