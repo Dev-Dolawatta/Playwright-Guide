@@ -27,7 +27,7 @@
         "testDir": "C:/Users/Admin/Desktop/Internship/Day 2 as a QA Team memeber/code",
         "testIgnore": [],
         "testMatch": [
-          "tests/record.test.ts"
+          "tests/basicInteractions.test.ts"
         ],
         "timeout": 30000
       }
@@ -47,7 +47,7 @@
       [
         "html",
         {
-          "open": "never"
+          "open": "always"
         }
       ]
     ],
@@ -65,14 +65,14 @@
   },
   "suites": [
     {
-      "title": "tests\\record.test.ts",
-      "file": "tests/record.test.ts",
+      "title": "tests\\basicInteractions.test.ts",
+      "file": "tests/basicInteractions.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "test",
-          "ok": true,
+          "title": "sum",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -85,23 +85,67 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 14168,
-                  "errors": [],
-                  "stdout": [],
+                  "status": "failed",
+                  "duration": 4158,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#addmessage')\nExpected: \u001b[32m\"15\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#addmessage')\u001b[22m\n\u001b[2m    5 × locator resolved to <p class=\"mt-20\" id=\"addmessage\"></p>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#addmessage')\nExpected: \u001b[32m\"15\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#addmessage')\u001b[22m\n\u001b[2m    5 × locator resolved to <p class=\"mt-20\" id=\"addmessage\"></p>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n\n    at C:\\Users\\Admin\\Desktop\\Internship\\Day 2 as a QA Team memeber\\code\\tests\\basicInteractions.test.ts:35:20",
+                    "location": {
+                      "file": "C:\\Users\\Admin\\Desktop\\Internship\\Day 2 as a QA Team memeber\\code\\tests\\basicInteractions.test.ts",
+                      "column": 20,
+                      "line": 35
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 33 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[36mawait\u001b[39m result\u001b[33m.\u001b[39mtextContent())\u001b[90m//to get the text content of the result element and print it in the console\u001b[39m\n \u001b[90m 34 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 |\u001b[39m     expect(result)\u001b[33m.\u001b[39mtoHaveText(\u001b[32m\"\"\u001b[39m \u001b[33m+\u001b[39m expectedSum)\u001b[90m//assert that the result element has the expected text content\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 36 |\u001b[39m\n \u001b[90m 37 |\u001b[39m })\n \u001b[90m 38 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Admin\\Desktop\\Internship\\Day 2 as a QA Team memeber\\code\\tests\\basicInteractions.test.ts",
+                        "column": 20,
+                        "line": 35
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#addmessage')\nExpected: \u001b[32m\"15\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#addmessage')\u001b[22m\n\u001b[2m    5 × locator resolved to <p class=\"mt-20\" id=\"addmessage\"></p>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 33 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[36mawait\u001b[39m result\u001b[33m.\u001b[39mtextContent())\u001b[90m//to get the text content of the result element and print it in the console\u001b[39m\n \u001b[90m 34 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 |\u001b[39m     expect(result)\u001b[33m.\u001b[39mtoHaveText(\u001b[32m\"\"\u001b[39m \u001b[33m+\u001b[39m expectedSum)\u001b[90m//assert that the result element has the expected text content\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 36 |\u001b[39m\n \u001b[90m 37 |\u001b[39m })\n \u001b[90m 38 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Admin\\Desktop\\Internship\\Day 2 as a QA Team memeber\\code\\tests\\basicInteractions.test.ts:35:20\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-30T16:09:06.105Z",
+                  "startTime": "2026-05-31T07:39:37.170Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\Admin\\Desktop\\Internship\\Day 2 as a QA Team memeber\\code\\test-results\\tests-basicInteractions-sum\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Admin\\Desktop\\Internship\\Day 2 as a QA Team memeber\\code\\test-results\\tests-basicInteractions-sum\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Admin\\Desktop\\Internship\\Day 2 as a QA Team memeber\\code\\test-results\\tests-basicInteractions-sum\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Admin\\Desktop\\Internship\\Day 2 as a QA Team memeber\\code\\tests\\basicInteractions.test.ts",
+                    "column": 20,
+                    "line": 35
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "6b81850ba3102cd63a11-bd47731fe808a4e81d4e",
-          "file": "tests/record.test.ts",
-          "line": 3,
+          "id": "e8550347d925177e1da7-ea445e21c0dc670ca51b",
+          "file": "tests/basicInteractions.test.ts",
+          "line": 16,
           "column": 5
         }
       ]
@@ -109,11 +153,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-30T16:09:04.098Z",
-    "duration": 18348.352000000003,
-    "expected": 1,
+    "startTime": "2026-05-31T07:39:34.941Z",
+    "duration": 8894.041,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
